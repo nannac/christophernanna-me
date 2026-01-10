@@ -1,0 +1,40 @@
+name: Azure Web App CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: YOUR_APP_NAME            # <-- replace with your Azure Web App name
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: .
+
+# Notes:
+# 1) Create an Azure Web App (Linux) and grab its Publish Profile from the Azure Portal
+#    (Overview -> Get publish profile). Add the file contents as the repository secret
+#    `AZURE_WEBAPP_PUBLISH_PROFILE` in GitHub (Settings -> Secrets -> Actions).
+# 2) Replace `YOUR_APP_NAME` above with the name of the Web App resource.
+# 3) This workflow expects `requirements.txt` to exist (we generated one) and a
+#    Procfile/startup command is used by Azure. If you prefer Azure CLI deployment,
+#    we can scaffold that instead.
