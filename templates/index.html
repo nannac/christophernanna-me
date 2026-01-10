@@ -1,0 +1,13 @@
+<!-- This template inherits from 'base.html'. -->
+{% extends "base.html" %}
+
+<!-- This block overrides the 'title' block in 'base.html'. -->
+{% block title %}Home{% endblock %}
+
+<!-- This block overrides the 'content' block in 'base.html'. 
+     The content inside this block will be injected into the body of 'base.html'. -->
+{% block content %}
+<h1 class="text-3xl font-bold underline">
+    Hello world!
+</h1>
+{% endblock %}

@@ -1,0 +1,35 @@
+# This section contains metadata about the project.
+[project]
+# The name of the project. This is used when packaging the project.
+name = "christophernanna-me"
+# The version of the project.
+version = "0.1.0"
+# A short description of the project.
+description = "Personal website and blog."
+# The authors of the project.
+authors = [
+    {name = "Christopher Hanna", email = "chris@christophernanna.me"},
+]
+# A list of dependencies required for the project to run.
+# These will be installed by pip.
+dependencies = [
+    "Flask",
+    "python-dotenv",
+]
+
+# This section contains URLs related to the project.
+[project.urls]
+"Homepage" = "https://christophernanna.me"
+
+# This section defines the build system for the project.
+# It tells pip how to build the project.
+[build-system]
+# The build tools required to build the project.
+requires = ["setuptools"]
+# The function that will be called to build the project.
+build-backend = "setuptools.build_meta"
+
+# This section contains configuration for the setuptools build system.
+[tool.setuptools]
+# This tells setuptools that the 'app.py' file is a top-level module.
+py-modules = ["app"]

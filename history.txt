@@ -1,0 +1,31 @@
+# Project Goals
+
+- Create a personal website and blog for professional exposure.
+- Use Flask for the backend, and Tailwind CSS with DaisyUI for the frontend.
+
+# Project History
+
+- **Initial Setup:**
+  - Initialized a new Flask project.
+  - Set up Python dependency management using `pyproject.toml` and added `Flask` and `python-dotenv`.
+  - Configured the project for editable installation with `pip install -e .`.
+  - Set up the frontend toolchain using npm, creating a `package.json` file.
+  - Added frontend dependencies: `tailwindcss`, `daisyui`, `postcss`, and `autoprefixer`.
+
+- **File Structure:**
+  - Created the main Flask application file: `app.py`.
+  - Created the directory structure for `static` files and `templates`.
+  - Added the input stylesheet for Tailwind: `static/css/input.css`.
+  - Created a base HTML template (`templates/base.html`) and a home page template (`templates/index.html`).
+
+- **Configuration:**
+  - Configured `tailwind.config.js` to process the template files and enable the DaisyUI plugin.
+  - Configured `postcss.config.js` to use `tailwindcss` and `autoprefixer`.
+  - Added an npm script (`build:css`) to compile the CSS.
+  - Added a `dev` script to `package.json` using `concurrently` to run the CSS compiler and Flask server together.
+
+- **UI and Routing:**
+  - Added a navigation bar to the base template with links to "About" and "Blog".
+  - Updated the base template to center the page content.
+  - Set the "About" page as the default index route.
+  - Created placeholder pages for "About" and "Blog".

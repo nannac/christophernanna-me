@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: christophernanna-me
+Version: 0.1.0
+Summary: Personal website and blog.
+Author-email: Christopher Hanna <chris@christophernanna.me>
+Project-URL: Homepage, https://christophernanna.me
+Requires-Dist: Flask
+Requires-Dist: python-dotenv

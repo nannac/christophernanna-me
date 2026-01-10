@@ -1,0 +1,13 @@
+/* This is the main CSS file that Tailwind will process. */
+
+/* The '@tailwind base' directive injects Tailwind's base styles. 
+   This includes a CSS reset (like normalize.css) to ensure consistent rendering across browsers. */
+@tailwind base;
+
+/* The '@tailwind components' directive injects Tailwind's component classes.
+   This includes pre-designed components from plugins like DaisyUI. */
+@tailwind components;
+
+/* The '@tailwind utilities' directive injects Tailwind's utility classes.
+   These are the classes you'll use to style your HTML (e.g., 'text-red-500', 'p-4'). */
+@tailwind utilities;

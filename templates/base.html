@@ -1,0 +1,37 @@
+<!-- This is the base template for all other HTML files in the project. -->
+<!DOCTYPE html>
+<html lang="en" data-theme="mocha">
+<head>
+    <!-- Specifies the character encoding for the document. -->
+    <meta charset="UTF-8">
+    <!-- Sets the viewport to make the website responsive on mobile devices. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- This is a Jinja2 block that can be overridden by child templates. 
+         It sets the title of the page. -->
+    <title>{% block title %}My Website{% endblock %}</title>
+    
+    <!-- Links to the compiled CSS file. 
+         The 'url_for' function is a Flask helper that generates a URL for the given endpoint and file. -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+</head>
+<body class="bg-base-100 min-h-screen">
+    <!-- DaisyUI Navbar -->
+    <div class="navbar bg-base-100 items-center justify-end border-b border-transparent" style="border-bottom-color: #585b70	;">
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1 py-0">
+          <!-- Links to the 'About' and 'Blog' pages. -->
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('blog') }}">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Centered content section -->
+    <main class="container mx-auto">
+        <!-- This is another Jinja2 block. 
+             Child templates will inject their content here. -->
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
