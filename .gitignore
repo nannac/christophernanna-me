@@ -1,1 +1,19 @@
+# Python
+.venv
+venv
+*.pyc
+__pycache__/
+.flaskenv
+
+# Node.js
 node_modules
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
