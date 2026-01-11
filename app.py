@@ -1,5 +1,6 @@
 # Import the Flask class from the flask module. 'render_template' is used to render HTML files.
 from flask import Flask, render_template, redirect, url_for
+import datetime
 import os
 import frontmatter
 import markdown
@@ -15,6 +16,10 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 # Directory where markdown files are stored
 NOTES_DIR = "notes"
+
+@app.context_processor
+def inject_current_year():
+    return {'current_year': datetime.datetime.now().year}
 
 # This is a decorator that tells Flask what URL should trigger our function.
 # In this case, it's the root URL of our site ("/").
