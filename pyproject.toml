@@ -10,6 +10,13 @@ description = "Personal website and blog."
 authors = [
     {name = "Christopher Hanna", email = "chris@christophernanna.me"},
 ]
+dependencies = [
+    "Flask==3.1.2",
+    "python-dotenv==1.2.1",
+    "python-frontmatter==1.1.0",
+    "PyYAML==6.0.3",
+    "Markdown==3.10",
+]
 
 # This section contains URLs related to the project.
 [project.urls]
