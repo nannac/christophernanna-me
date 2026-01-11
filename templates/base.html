@@ -15,7 +15,8 @@
          The 'url_for' function is a Flask helper that generates a URL for the given endpoint and file. -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
 </head>
-<body class="bg-ctp-base text-ctp-text min-h-screen">
+<body class="bg-ctp-base text-ctp-text flex flex-col min-h-screen">
+    <div class="flex-grow">
     <nav class="bg-ctp-crust p-4 flex justify-end">
         <a href="{{ url_for('me') }}" class="px-4 py-2 rounded {% if active_page == 'me' %}bg-ctp-text text-ctp-crust{% endif %}">Me</a>
         <a href="{{ url_for('notes') }}" class="px-4 py-2 rounded {% if active_page == 'notes' %}bg-ctp-text text-ctp-crust{% endif %}">Notes</a>
@@ -27,6 +28,7 @@
              Child templates will inject their content here. -->
         {% block content %}{% endblock %}
     </main>
+    </div>
     <footer class="footer footer-center p-4 bg-ctp-crust text-ctp-text">
         <aside>
             <p>Copyright © {{ current_year }} - All right reserved by Christopher Nanna</p>
