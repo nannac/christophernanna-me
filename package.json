@@ -4,20 +4,17 @@
   "description": "Personal website and blog.",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch",
-    "dev": "concurrently \"npm run build:css\" \"FLASK_APP=app.py FLASK_ENV=development flask run --reload\""
+    "build:css": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css",
+    "dev": "flask run --reload"
   },
   "keywords": [],
   "author": "Christopher Hanna",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "@catppuccin/tailwindcss": "^0.1.1",
+    "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.19",
-    "concurrently": "^8.2.2",
-    "daisyui": "^4.12.2",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4"
-  },
-  "devDependencies": {
-    "@catppuccin/tailwindcss": "^0.1.1"
   }
 }

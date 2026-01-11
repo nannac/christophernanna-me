@@ -15,17 +15,11 @@
          The 'url_for' function is a Flask helper that generates a URL for the given endpoint and file. -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
 </head>
-<body class="bg-base-100 min-h-screen">
-    <!-- DaisyUI Navbar -->
-    <div class="navbar bg-base-100 items-center justify-end border-b border-transparent" style="border-bottom-color: #585b70	;">
-      <div class="flex-none">
-        <ul class="menu menu-horizontal px-1 py-0">
-          <!-- Links to the 'About' and 'Blog' pages. -->
-          <li><a href="{{ url_for('about') }}">About</a></li>
-          <li><a href="{{ url_for('blog') }}">Blog</a></li>
-        </ul>
-      </div>
-    </div>
+<body class="bg-ctp-base text-ctp-text min-h-screen">
+    <nav class="bg-ctp-crust p-4 flex justify-end">
+        <a href="{{ url_for('me') }}" class="px-4 py-2 rounded {% if active_page == 'me' %}bg-ctp-text text-ctp-crust{% endif %}">Me</a>
+        <a href="{{ url_for('notes') }}" class="px-4 py-2 rounded {% if active_page == 'notes' %}bg-ctp-text text-ctp-crust{% endif %}">Notes</a>
+    </nav>
 
     <!-- Centered content section -->
     <main class="container mx-auto">

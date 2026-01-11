@@ -11,3 +11,7 @@
 /* The '@tailwind utilities' directive injects Tailwind's utility classes.
    These are the classes you'll use to style your HTML (e.g., 'text-red-500', 'p-4'). */
 @tailwind utilities;
+
+.menu li > a.active {
+    background-color: #303446;
+}

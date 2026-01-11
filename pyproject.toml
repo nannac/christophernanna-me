@@ -10,12 +10,6 @@ description = "Personal website and blog."
 authors = [
     {name = "Christopher Hanna", email = "chris@christophernanna.me"},
 ]
-# A list of dependencies required for the project to run.
-# These will be installed by pip.
-dependencies = [
-    "Flask",
-    "python-dotenv",
-]
 
 # This section contains URLs related to the project.
 [project.urls]

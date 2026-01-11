@@ -19,93 +19,13 @@ module.exports = {
   // The 'plugins' array is where you can add Tailwind CSS plugins.
   // Plugins can add new utilities, components, or base styles to Tailwind.
   plugins: [
-    // The 'daisyui' plugin adds a set of pre-designed components to Tailwind.
-    require("daisyui"),
-    require("@catppuccin/tailwindcss"),
+    // The 'catppuccin' plugin adds a set of color themes to Tailwind.
+    require("@catppuccin/tailwindcss")({
+      // prefix to use, e.g. `cat-pink` becomes `ctp-pink`
+      prefix: "ctp",
+      // which flavour of colours to use by default, in the `:root`
+      defaultFlavour: "latte",
+    }),
+    require("@tailwindcss/typography"),
   ],
-  daisyui: {
-    themes: [
-      "light",
-      "dark",
-      "cupcake",
-      "bumblebee",
-      "emerald",
-      "corporate",
-      "synthwave",
-      "retro",
-      "cyberpunk",
-      "valentine",
-      "halloween",
-      "garden",
-      "forest",
-      "aqua",
-      "lofi",
-      "pastel",
-      "fantasy",
-      "wireframe",
-      "black",
-      "luxury",
-      "dracula",
-      "cmyk",
-      "autumn",
-      "business",
-      "acid",
-      "lemonade",
-      "night",
-      "coffee",
-      "winter",
-      {
-        "latte": {
-          "primary": "#f5e0dc",
-          "secondary": "#cba6f7",
-          "accent": "#94e2d5",
-          "neutral": "#11111b",
-          "base-100": "#eff1f5",
-          "info": "#89b4fa",
-          "success": "#a6e3a1",
-          "warning": "#fab387",
-          "error": "#f38ba8",
-        },
-      },
-      {
-        "frappe": {
-          "primary": "#f5e0dc",
-          "secondary": "#cba6f7",
-          "accent": "#94e2d5",
-          "neutral": "#11111b",
-          "base-100": "#303446",
-          "info": "#89b4fa",
-          "success": "#a6e3a1",
-          "warning": "#fab387",
-          "error": "#f38ba8",
-        },
-      },
-      {
-        "macchiato": {
-          "primary": "#f5e0dc",
-          "secondary": "#cba6f7",
-          "accent": "#94e2d5",
-          "neutral": "#11111b",
-          "base-100": "#24273a",
-          "info": "#89b4fa",
-          "success": "#a6e3a1",
-          "warning": "#fab387",
-          "error": "#f38ba8",
-        },
-      },
-      {
-        "mocha": {
-          "primary": "#f5e0dc",
-          "secondary": "#cba6f7",
-          "accent": "#94e2d5",
-          "neutral": "#11111b",
-          "base-100": "#1e1e2e",
-          "info": "#89b4fa",
-          "success": "#a6e3a1",
-          "warning": "#fab387",
-          "error": "#f38ba8",
-        },
-      },
-    ],
-  },
 }
