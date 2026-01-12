@@ -1459,6 +1459,14 @@ video {
   max-width: none;
 }
 
+.max-w-prose {
+  max-width: 65ch;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1553,11 +1561,6 @@ video {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .py-2 {

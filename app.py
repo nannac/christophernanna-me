@@ -9,10 +9,13 @@ import markdown
 # '__name__' is a special Python variable that gets the name of the current module.
 # Flask uses this to know where to look for resources like templates and static files.
 app = Flask(__name__)
-# Enable template auto-reload and disable static file caching during development
-app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.jinja_env.auto_reload = True
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
+# Check if the app is running in a production environment
+if os.environ.get("VERCEL_ENV") != "production":
+    # Enable template auto-reload and disable static file caching during development
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
+    app.jinja_env.auto_reload = True
+    app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 # Directory where markdown files are stored
 NOTES_DIR = "notes"
