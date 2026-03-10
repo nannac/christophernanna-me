@@ -19,7 +19,6 @@
     <div class="flex-grow flex flex-col">  <!-- Added flex flex-col here -->
     <nav class="bg-ctp-crust p-4 flex justify-end">
         <a href="{{ url_for('me') }}" class="px-4 py-2 rounded {% if active_page == 'me' %}bg-ctp-text text-ctp-crust{% endif %}">Me</a>
-        <a href="{{ url_for('notes') }}" class="px-4 py-2 rounded {% if active_page == 'notes' %}bg-ctp-text text-ctp-crust{% endif %}">Notes</a>
     </nav>
 
     <!-- Centered content section -->
